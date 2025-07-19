@@ -8,7 +8,7 @@ const guruLinks = {
   G6: "Seni-Tari/G6.html",
   G7: "Seni-Rupa/G7.html",
   G8: "Seni-Teater/G8.html",
-  G9: "Penunjang/G9.html",
+  G9: "G9.html",
 };
 
 

@@ -1,0 +1,261 @@
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(to right, #e3f2fd, #bbdefb);
+}
+
+.background-overlay {
+  background: url('nahbre.jpeg') no-repeat center center fixed;
+  background-size: cover;
+  opacity: 0.3;
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  z-index: -1;
+}
+
+.logo, .logo-mini {
+  width: 100px;
+  margin-top: 30px;
+  border-radius: 12px;
+}
+
+.login-container {
+  text-align: center;
+  padding-top: 80px;
+  animation: fadeIn 1.5s ease-in;
+}
+
+input[type="password"] {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 8px;
+  border: 2px solid #2196f3;
+  width: 220px;
+  margin-top: 10px;
+}
+
+button {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background: linear-gradient(to right, #2196f3, #42a5f5);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+#masukBtn {
+  margin-top: 20px;       /* Buat tombol turun ke bawah */
+  padding: 10px 20px;      /* Ukuran tombol jadi sedikit lebih kecil */
+  font-size: 14px;        /* Ukuran tulisan lebih kecil */
+  border-radius: 5px;     /* Sudut tombol */
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  cursor: pointer;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.app-name {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #1976d2;
+  color: white;
+  padding: 8px 12px;
+  font-weight: bold;
+  font-size: 16px;
+  border-radius: 4px;
+  z-index: 1000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  line-height: 1.2;
+}
+
+.app-name .app-sub {
+  font-size: 12px;
+  font-weight: normal;
+  color: #ffe6e6;
+  margin-top: 2px;
+}
+
+.footer-credits {
+  position: fixed;
+  bottom: 10px;
+  width: 100%;
+  text-align: center;
+  font-size: 14px;
+  color: rgba(0, 0, 0, 0.3); /* warna samar */
+  font-style: italic;
+  pointer-events: none;
+}
+
+
+#masukBtn:hover {
+  background-color: #1976d2;
+}
+
+button:hover {
+  background: #1e88e5;
+  transform: scale(1.05);
+}
+
+.main-container {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+  animation: slideIn 1s ease;
+}
+
+.quote {
+  font-style: italic;
+  color: #0d47a1;
+  margin-top: -10px;
+}
+
+.card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 15px;
+  max-height: 400px;
+  overflow-y: auto;
+  padding-right: 10px;
+
+  /* Sembunyikan scrollbar secara visual */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* Internet Explorer */
+}
+
+.card-grid {
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 15px;
+  max-height: 100vh; /* Full tinggi layar */
+  overflow-y: auto;
+  padding-right: 10px;
+
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.card-grid::-webkit-scrollbar {
+  width: 0px;
+  background: transparent;
+}
+.logo-kecil {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  z-index: 999;
+}
+
+.logo-kecil img {
+  width: 30px;
+  height: auto;
+  opacity: 0.9;
+  border-radius: 50%; /* Sudut jadi bulat sempurna */
+}
+
+
+
+
+
+.card {
+  font-size: 23px; /* Bisa kamu sesuaikan, misalnya 18px untuk lebih besar */
+  background: white;
+  border-radius: 16px;
+  padding: 30px;
+  box-shadow: 0 4px 8px rgba(179, 32, 32, 0.15);
+  cursor: pointer;
+  transition: 0.3s ease;
+  text-align: center;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  background-color: #e3f2fd;
+}
+
+.section {
+  margin-top: 40px;
+  background: white;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(74, 59, 59, 0.1);
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+}
+
+table, th, td {
+  border: 1px solid #90caf9;
+}
+
+th, td {
+  padding: 8px;
+  text-align: center;
+}
+
+.gallery img {
+  margin: 5px;
+  border-radius: 8px;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+}
+
+ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideIn {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+/* Tambahan untuk password wrapper */
+.password-wrapper {
+  position: relative;
+  max-width: 300px;
+  margin: 0 auto 10px auto;
+}
+
+.password-wrapper input {
+  width: 100%;
+  padding: 10px 40px 10px 10px;
+  box-sizing: border-box;
+  font-size: 16px;
+  border-radius: 0px !important;
+  border: 2px solid #2196f3;
+}
+
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  color: #86b8ee;
+  padding: 0;
+  line-height: 1;
+}
+
+/* Hilangkan efek hover/transisi */
+.toggle-password:hover {
+  text-decoration: none;
+  background: none;
+}

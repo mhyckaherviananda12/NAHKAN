@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>SDN 002 TANJUNG REDEB - Login</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    .error-message {
+      color: red;
+      margin-top: 10px;
+      display: none;
+      text-align: center;
+    }
+
+    .password-wrapper {
+      width: 100%;
+      max-width: 300px;
+      margin: 0 auto 10px auto;
+    }
+
+    .password-wrapper input {
+      width: 100%;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+      border-radius: 0px;
+      border: 2px solid #2196f3;
+    }
+
+    button {
+      max-width: 300px;
+      width: 100%;
+      margin: 10px auto;
+      display: block;
+      padding: 10px;
+      box-sizing: border-box;
+      font-size: 16px;
+    }
+
+    .subtitle {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      position: relative;
+      top: -12px; /* ← posisi naik sedikit */
+    }
+  </style>
+</head>
+<body>
+  <div class="background-overlay"></div>
+  <div class="login-container">
+    <img src="logo.png" class="logo" alt="Logo Sekolah" />
+    <h1>SD NEGERI 002 TANJUNG REDEB</h1>
+
+    <!-- Tulisan Web Perangkat Ajar yang naik -->
+    <div class="subtitle">Website Perangkat Ajar</div>
+
+    <h2 style="margin-top: -5px; color: #cd2934;">Kelas VA 2025/2026</h2>
+
+    <div class="password-wrapper">
+      <input type="password" id="passwordInput" placeholder="Password" />
+    </div>
+    <div class="logo-kecil">
+  <img src="logo-mini.jpg" alt="Logo Mini" />
+</div>
+
+
+    <button id="masukBtn" onclick="checkPassword()">Masuk</button>
+    <p id="errorMessage" class="error-message">Password salah!</p>
+    <div class="footer-credits">© Powered by Mhycka H. Yuwono</div>
+  </div>
+
+  <script src="password.js"></script>
+  <script>
+    function checkPassword() {
+      const input = document.getElementById("passwordInput").value;
+      const errorMessage = document.getElementById("errorMessage");
+
+      if (input === PASSWORD_HERI) {
+        window.location.href = "heri.html";
+      } else {
+        errorMessage.style.display = "block";
+      }
+    }
+  </script>
+</body>
+</html>

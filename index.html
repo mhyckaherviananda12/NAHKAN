@@ -1,88 +1,101 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>SDN 002 TANJUNG REDEB - Login</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Multi-edit Overview</title>
   <style>
-    .error-message {
-      color: red;
-      margin-top: 10px;
-      display: none;
-      text-align: center;
-    }
-
-    .password-wrapper {
-      width: 100%;
-      max-width: 300px;
-      margin: 0 auto 10px auto;
-    }
-
-    .password-wrapper input {
-      width: 100%;
-      padding: 10px;
+    * {
+      margin: 0;
+      padding: 0;
       box-sizing: border-box;
-      font-size: 16px;
-      border-radius: 0px;
-      border: 2px solid #2196f3;
     }
 
-    button {
-      max-width: 300px;
-      width: 100%;
-      margin: 10px auto;
-      display: block;
-      padding: 10px;
-      box-sizing: border-box;
-      font-size: 16px;
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 100vh;
+      padding: 50px;
+      flex-direction: row; /* Default: samping */
     }
 
-    .subtitle {
-      font-size: 18px;
+    .left {
+      max-width: 50%;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: white;
+    }
+
+    p {
+      font-size: 1.1rem;
+      color: #ccc;
+      margin-bottom: 2rem;
+    }
+
+    .btn-login {
+      background-color: #D6FF4C;
+      color: #000;
       font-weight: bold;
-      color: #333;
-      position: relative;
-      top: -12px; /* ← posisi naik sedikit */
+      padding: 10px 20px;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s ease;
+      text-decoration: none;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .btn-login:hover {
+      background-color: #c2e946;
+    }
+
+    .right img {
+      max-width: 300px;
+    }
+
+    /* ========== TAMBAHAN UNTUK HP ========== */
+    @media (max-width: 768px) {
+      body {
+        flex-direction: column;
+        justify-content: flex-start;
+        text-align: center;
+        padding: 20px;
+        height: auto;
+      }
+
+      .right {
+        order: -1; /* Logo pindah ke atas */
+        margin-bottom: 20px;
+      }
+
+      .right img {
+        max-width: 150px;
+      }
+
+      .left {
+        max-width: 100%;
+      }
     }
   </style>
 </head>
 <body>
-  <div class="background-overlay"></div>
-  <div class="login-container">
-    <img src="logo.png" class="logo" alt="Logo Sekolah" />
-    <h1>SD NEGERI 002 TANJUNG REDEB</h1>
-
-    <!-- Tulisan Web Perangkat Ajar yang naik -->
-    <div class="subtitle">Website Perangkat Ajar</div>
-
-    <h2 style="margin-top: -5px; color: #cd2934;">Kelas VA 2025/2026</h2>
-
-    <div class="password-wrapper">
-      <input type="password" id="passwordInput" placeholder="Password" />
-    </div>
-    <div class="logo-kecil">
-  <img src="logo-mini.jpg" alt="Logo Mini" />
-</div>
-
-
-    <button id="masukBtn" onclick="checkPassword()">Masuk</button>
-    <p id="errorMessage" class="error-message">Password salah!</p>
-    <div class="footer-credits">© Powered by Mhycka H. Yuwono</div>
+  <div class="left">
+    <h1>SDN 002<br> Tanjung Redeb</h1>
+    <p>Perangkat Ajar 2025/2026</p>
+    <a href="login.html" class="btn-login">Login →</a>
   </div>
-
-  <script src="password.js"></script>
-  <script>
-    function checkPassword() {
-      const input = document.getElementById("passwordInput").value;
-      const errorMessage = document.getElementById("errorMessage");
-
-      if (input === PASSWORD_HERI) {
-        window.location.href = "heri.html";
-      } else {
-        errorMessage.style.display = "block";
-      }
-    }
-  </script>
+  <div class="right">
+    <img src="logo.png" alt="Multi-edit Icon">
+  </div>
 </body>
 </html>
